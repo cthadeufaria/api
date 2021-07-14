@@ -31,6 +31,8 @@
 
 
 # Deploying on Heroku
+reference 1: https://devcenter.heroku.com/articles/getting-started-with-python
+reference 2:https://devcenter.heroku.com/articles/flask-memcache
 1. Install Heroku (if needed)
     -sudo snap install heroku --classic
 2. Login to Heroku
@@ -43,6 +45,7 @@
     -pip freeze > requirements.txt
 5. Create and deploy app
     -heroku create
+    # see reference 2
     -git push heroku main
 6. Check if at least one instance of app is running
     -heroku ps:scale web=1
