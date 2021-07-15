@@ -45,11 +45,6 @@ reference 2:https://devcenter.heroku.com/articles/flask-memcache
     -pip freeze > requirements.txt
 5. Create and deploy app
     -heroku create
-    1. Create addon for postgresql database
-        -heroku addons:create heroku-postgresql:hobby-dev
-    2. Install necessary modules
-        -pip install flask-sqlalchemy flask-migrate psycopg2
-    3. 
     -git push heroku main
 6. Check if at least one instance of app is running
     -heroku ps:scale web=1
