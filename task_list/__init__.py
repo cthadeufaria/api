@@ -21,4 +21,4 @@ def create_app():
     from . import models
     app.register_blueprint(task_list.bp)
 
-    return app      
+    return app
