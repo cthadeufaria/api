@@ -1,6 +1,6 @@
 from task_list import db
 
-class Drink(db.Model):
+class Task(db.Model):
     # Create table column: 'db.Column'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), unique=True, nullable=False)

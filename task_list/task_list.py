@@ -3,7 +3,7 @@ from flask import (
 )
 
 from task_list import db
-from task_list.models import Drink
+from task_list.models import Task
 
 bp = Blueprint('task_list', __name__)
 
@@ -13,17 +13,17 @@ def index():
         name = request.form['name']
         description = request.form['description']
         if not name:
-            flash('Drink name is required.')
+            flash('Task name is required.')
         else:
-            db.session.add(Drink(name=name, description=description))
+            db.session.add(Task(name=name, description=description))
             db.session.commit()
 
-    tasks = Drink.query.all()
+    tasks = Task.query.all()
     return render_template('task_list/index.html', tasks=tasks)
 
 @bp.route('/<int:id>/delete', methods=('POST',))
 def delete(id):
-    task = Drink.query.get(id)
+    task = Task.query.get(id)
     if task != None:
         db.session.delete(task)
         db.session.commit()
