@@ -20,4 +20,4 @@ def create_app():
 
     from . import models
 
-    return app
+    return app      
