@@ -87,4 +87,8 @@ reference 2:https://devcenter.heroku.com/articles/flask-memcache
     -heroku pg (shows db's info)
     -reference: https://devcenter.heroku.com/articles/getting-started-with-python#provision-a-database
     -reference: https://devcenter.heroku.com/articles/heroku-postgresql
+
+
+# Flask API method 2
+ -reference: https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
     

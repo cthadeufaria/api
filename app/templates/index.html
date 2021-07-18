@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+    <head>
+        {% if greetings %}
+        <title>{{greetings}}</title>
+        {% else %}
+        <title>API Main Page</title>
+        {% endif %}
+    </head>
+    <body>
+        <h1>{{ msg }}!</h1>
+    </body>
+</html>
