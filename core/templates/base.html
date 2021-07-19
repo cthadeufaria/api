@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+        {% if greetings %}
+        <title>{{greetings}}</title>
+        {% else %}
+        <title>Test API</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            <a href="{{ url_for('index') }}"> API Documentation</a>
+            <a href="{{ url_for('login') }}"> Login</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
