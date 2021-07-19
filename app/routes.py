@@ -3,10 +3,21 @@ from flask import render_template
 
 
 @app.route('/')
+@app.route('/index')
 def index():
-    msg = 'Welcome to the API main endpoint'
     # greetings = 'HI!'
-    return render_template('index.html' , greetings=None, msg=msg)
+    msg = 'Welcome to the API documentation page'
+    endpoints = [{
+        'name' : 'GET info',
+        'description' : '/info/<id> Parameters: id (optional): info id to be retrieved', 
+    }, {
+        'name' : 'POST info',
+        'description' : '/info Parameters: None',
+    }, {
+        'name' : 'DELETE info',
+        'description' : '/info/<id> Parameters: id: info id to be deleted',
+    }]
+    return render_template('index.html' , greetings=None, msg=msg, endpoints=endpoints)
 
 
 # # Create GET request

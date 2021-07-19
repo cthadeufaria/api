@@ -1,13 +1,8 @@
-<!doctype html>
-<html>
-    <head>
-        {% if greetings %}
-        <title>{{greetings}}</title>
-        {% else %}
-        <title>API Main Page</title>
-        {% endif %}
-    </head>
-    <body>
+{% extends "base.html" %}
+
+{% block content %}
         <h1>{{ msg }}!</h1>
-    </body>
-</html>
+        {% for endpoint in endpoints %}
+        <div><p><b>{{ endpoint.name }}:</b> {{ endpoint.description }}</p></div>
+        {% endfor %}
+{% endblock %}
